@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Statements Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    h1 {
+      color: #333;
+    }
+    h2 {
+      color: #555;
+    }
+    button {
+      margin: 5px;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    .output {
+      margin-top: 10px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      background-color: #f9f9f9;
+    }
+    pre {
+      background-color: #f4f4f4;
+      padding: 10px;
+      border: 1px solid #ddd;
+      overflow: auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>Ví dụ về Các Câu Lệnh JavaScript</h1>
+
+  <!-- Câu lệnh gán -->
+  <h2>1. Câu lệnh gán</h2>
+  <p>Đặt giá trị cho các biến và hiển thị chúng.</p>
+  <button onclick="assignValues()">Gán giá trị</button>
+  <div id="assignment" class="output"></div>
+  <pre><code>let x = 10;
+let y = 5;</code></pre>
+
+  <!-- Câu lệnh điều kiện -->
+  <h2>2. Câu lệnh điều kiện</h2>
+  <p>Kiểm tra xem giá trị của biến <strong>x</strong> có lớn hơn <strong>y</strong> không.</p>
+  <button onclick="checkCondition()">Kiểm tra điều kiện</button>
+  <div id="condition" class="output"></div>
+  <pre><code>if (x > y) {
+  // Nếu x lớn hơn y
+} else {
+  // Nếu x không lớn hơn y
+}</code></pre>
+
+  <!-- Câu lệnh vòng lặp -->
+  <h2>3. Câu lệnh vòng lặp</h2>
+  <p>Thực hiện vòng lặp và hiển thị các giá trị lặp lại.</p>
+  <button onclick="loopExample()">Chạy vòng lặp</button>
+  <div id="loop" class="output"></div>
+  <pre><code>for (let i = 1; i <= 5; i++) {
+  // Hiển thị giá trị i
+}</code></pre>
+
+  <!-- Câu lệnh hàm -->
+  <h2>4. Câu lệnh hàm</h2>
+  <p>Gọi một hàm để hiển thị thông báo.</p>
+  <button onclick="sayHello()">Gọi hàm</button>
+  <div id="function" class="output"></div>
+  <pre><code>function greet() {
+  return "Xin chào!";
+}</code></pre>
+
+  <!-- Câu lệnh trả về -->
+  <h2>5. Câu lệnh trả về</h2>
+  <p>Thực hiện phép tính tổng và hiển thị kết quả.</p>
+  <button onclick="calculateSum()">Tính tổng</button>
+  <div id="return" class="output"></div>
+  <pre><code>function sum(a, b) {
+  return a + b;
+}
+let result = sum(10, 5);</code></pre>
+
+  <script>
+    // 1. Câu lệnh gán
+    function assignValues() {
+      let x = 10;
+      let y = 5;
+      document.getElementById("assignment").innerHTML = `<strong>x</strong> = ${x}, <strong>y</strong> = ${y}`;
+    }
+
+    // 2. Câu lệnh điều kiện
+    function checkCondition() {
+      let x = 10;
+      let y = 5;
+      let result = (x > y) ? "x lớn hơn y." : "x không lớn hơn y.";
+      document.getElementById("condition").innerHTML = result;
+    }
+
+    // 3. Câu lệnh vòng lặp
+    function loopExample() {
+      let result = "";
+      for (let i = 1; i <= 5; i++) {
+        result += `Lặp lần thứ: ${i}<br>`;
+      }
+      document.getElementById("loop").innerHTML = result;
+    }
+
+    // 4. Câu lệnh hàm
+    function sayHello() {
+      function greet() {
+        return "Xin chào!";
+      }
+      document.getElementById("function").innerHTML = greet();
+    }
+
+    // 5. Câu lệnh trả về
+    function calculateSum() {
+      function sum(a, b) {
+        return a + b;
+      }
+      let result = sum(10, 5);
+      document.getElementById("return").innerHTML = `Tổng của 10 và 5 là: ${result}`;
+    }
+  </script>
+</body>
+</html>

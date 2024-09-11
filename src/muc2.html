@@ -1,0 +1,50 @@
+<!DOCTYPE html >
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Output Example</title>
+</head>
+
+<body>
+    <h1 id="demo">Xin chào!</h1>
+    <button onclick="changeInnerHTML()">Thay đổi nội dung (innerHTML)</button>
+    <br><br>
+    <button onclick="useDocumentWrite()">Sử dụng document.write()</button>
+    <br><br>
+    <button onclick="showAlert()">Hiển thị alert()</button>
+    <br><br>
+    <button onclick="logToConsole()">Ghi log console</button>
+    <br><br>
+    <button onclick="usePrompt()">Yêu cầu nhập liệu (prompt)</button>
+
+    <script>
+        // Thay đổi nội dung của phần tử HTML
+        function changeInnerHTML() {
+            document.getElementById("demo").innerHTML = "Hello từ innerHTML!";
+        }
+
+        // Ghi trực tiếp vào tài liệu HTML
+        function useDocumentWrite() {
+            document.write("Xin chào từ document.write! (Sẽ ghi đè trang web)");
+        }
+
+        // Hiển thị hộp thoại thông báo
+        function showAlert() {
+            alert("Xin chào từ alert!");
+        }
+
+        // Ghi thông tin vào bảng điều khiển (console)
+        function logToConsole() {
+            console.log("Hello từ console.log!");
+        }
+
+        // Yêu cầu người dùng nhập dữ liệu
+        function usePrompt() {
+            let name = prompt("Nhập tên của bạn:");
+            document.getElementById("demo").innerHTML = "Xin chào, " + name + "!";
+        }
+    </script>
+</body>
+
+</html>

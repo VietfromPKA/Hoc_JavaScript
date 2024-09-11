@@ -1,0 +1,38 @@
+1. cách để trèn js sự dụng thẻ <script></script> 
+- chèn nội tuyến trong thẻ <head></head> hoặc phần cuối của thẻ <body></body>
+- chèn ngoại tuyến bằng một file riêng .js và gắn liên kết ở cuối <body></body>
+
+2. các hình thức xuất dữ liệu của js
+- innerHTML : thay đổi một phần tự HTML - Sdung khi muốn hiện thị kết quả lên trang web
+- document.write() : ghi trực tiếp nội dung vào trang web - thường sử dụng trong quá trình tải trang
+- window.alert() : hiện thị một hộp thoại thông báo
+- window.prompt() : hiện thị hộp thoại nhập liệu, yêu cầu người dùng nhập liệu
+- console.log() : ghi thông tin vào bảng điều khiển của trình duyệt
+
+3. các câu lệnh phổ biến trong js
+- câu lệnh gán 
+    let x = 10;
+    let y = 5;
+- câu lệnh điều kiện
+    if (x > y) {
+        console.log("x lớn hơn y);
+    }else{
+        console.log("x không lớn hơn y);
+    }
+- câu lệnh vòng lặp
+    for(let i = 0; i < 5 ; i+=){
+        console.log(i);
+    }
+- câu lệnh hàm
+    function sayhello(){
+        console.log("xin chao Viet Nam");
+    }
+
+    sayhell(); // gọi hàm
+-câu lệnh trả về
+    function sum(a, b){
+        return a + b;
+    }
+
+    let result = sum(5, 10);
+    console.log(result);
