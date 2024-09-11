@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cú Pháp và Chèn JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        h2 {
+            color: #555;
+        }
+
+        .code-container {
+            margin-top: 10px;
+        }
+
+        .code-block {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            overflow: auto;
+            display: none;
+        }
+
+        .show-code-button {
+            margin: 5px 0;
+            padding: 5px 10px;
+            background-color: #4CAF50;
+            /* Màu nút */
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .show-code-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Cú Pháp và Chèn JavaScript</h1>
+
+    <!--Cú pháp trong JavaScript -->
+    <h2>Cú pháp trong JavaScript</h2>
+    <h3>Biến</h3>
+    <button class="show-code-button" onclick="toggleCode('variables')">Hiển thị mã</button>
+    <div id="variables" class="code-block">
+        <pre><code>var x = 10; // Khai báo biến với var
+let y = 20; // Khai báo biến với let
+const z = 30; // Khai báo biến với const</code></pre>
+    </div>
+
+    <h3>Câu lệnh</h3>
+    <button class="show-code-button" onclick="toggleCode('statements')">Hiển thị mã</button>
+    <div id="statements" class="code-block">
+        <pre><code>let name = "John"; // Câu lệnh gán
+
+if (age >= 18) {
+  console.log("Bạn đủ tuổi."); // Câu lệnh điều kiện
+} else {
+  console.log("Bạn chưa đủ tuổi.");
+}
+
+for (let i = 0; i < 5; i++) {
+  console.log(i); // Câu lệnh vòng lặp
+}</code></pre>
+    </div>
+
+    <h3>Hàm</h3>
+    <button class="show-code-button" onclick="toggleCode('functions')">Hiển thị mã</button>
+    <div id="functions" class="code-block">
+        <pre><code>function greet(name) {
+  return "Hello, " + name + "!";
+}
+
+let message = greet("Alice");
+console.log(message);</code></pre>
+    </div>
+
+    <h3>Đối tượng và Mảng</h3>
+    <button class="show-code-button" onclick="toggleCode('object-array')">Hiển thị mã</button>
+    <div id="object-array" class="code-block">
+        <pre><code>let person = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 30
+};
+
+let fruits = ["Apple", "Banana", "Cherry"];</code></pre>
+    </div>
+
+    <h3>Toán tử số học</h3>
+    <button class="show-code-button" onclick="toggleCode('arithmetic')">Hiển thị mã</button>
+    <div id="arithmetic" class="code-block">
+        <pre><code>let tong = 5 + 3; // 8
+let hieu = 5 - 3; // 2
+let tich = 5 * 3; // 15
+let thuong = 5 / 2; // 2.5
+let du = 5 % 3; // 2</code></pre>
+    </div>
+
+    <h3>Toán tử so sánh</h3>
+    <button class="show-code-button" onclick="toggleCode('comparison')">Hiển thị mã</button>
+    <div id="comparison" class="code-block">
+        <pre><code>let isEqual = (5 === 5); // true
+let isNotEqual = (5 !== 4); // true
+let isGreater = (5 > 4); // true
+let isLess = (4 < 5); // true</code></pre>
+    </div>
+
+    <h3>Cú pháp chuỗi</h3>
+    <button class="show-code-button" onclick="toggleCode('strings')">Hiển thị mã</button>
+    <div id="strings" class="code-block">
+        <pre><code>let greeting = "Hello, World!";
+let multiLine = \`This is a multi-line string.\`;</code></pre>
+    </div>
+
+    <h3>Cú pháp dấu phẩy</h3>
+    <button class="show-code-button" onclick="toggleCode('comma')">Hiển thị mã</button>
+    <div id="comma" class="code-block">
+        <pre><code>let person = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 30
+};
+
+let numbers = [1, 2, 3, 4, 5];</code></pre>
+    </div>
+
+    <h3>Cú pháp chú thích</h3>
+    <button class="show-code-button" onclick="toggleCode('comments')">Hiển thị mã</button>
+    <div id="comments" class="code-block">
+        <pre><code>// Đây là một chú thích đơn dòng
+
+/*
+   Đây là một chú thích nhiều dòng
+   Có thể kéo dài nhiều dòng
+*/</code></pre>
+    </div>
+
+    <h3>Cú pháp khối mã</h3>
+    <button class="show-code-button" onclick="toggleCode('blocks')">Hiển thị mã</button>
+    <div id="blocks" class="code-block">
+        <pre><code>if (true) {
+  console.log("Đây là một khối mã.");
+}</code></pre>
+    </div>
+
+    <script>
+        function toggleCode(id) {
+            var codeBlock = document.getElementById(id);
+            if (codeBlock.style.display === "none") {
+                codeBlock.style.display = "block";
+            } else {
+                codeBlock.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -29,10 +29,61 @@
     }
 
     sayhell(); // gọi hàm
--câu lệnh trả về
+- câu lệnh trả về
     function sum(a, b){
         return a + b;
     }
 
     let result = sum(5, 10);
     console.log(result);
+
+4. cú pháp trong JS
+- biến : khai báo biến dùng var, let, hoặc const
+- câu lệnh : câu lệch gán, câu lệnh điều kiện, câu lệnh vòng lặp (chi tiết xem mục 2)
+- Hàm (functions) : khai báo hàm, gọi hàm ( chi tiết xem mục 2)
+- Đối tượng, mảng :
+    Đối tượng: 
+    VD : let person = {
+        firstName: "John",
+        lastName: "Doe",
+        age: 30
+    };
+
+    Mảng:
+    VD : let fruits = ["Fruits", "Banana"]
+- Toán tử số học
+    let tong = 5 + 3; //8
+    let hieu = 5 - 3; //2
+    let tich = 5 * 3; //15
+    let thuong = 5 / 2; // 2.5
+    let du = 5 % 3; // 2
+- Toán tử so sánh
+    so sánh bằng (5 === 5)
+    so sánh khác ( 5 !== 4)
+    so sanh lớn, nhỏ (5 > 4), (4 < 5)
+- Cú pháp chuỗi
+    let greeting = "Hello, World!";
+    let multiLine = `This is a multi-line string.`;
+
+- Cú pháp dấu phẩy
+    let person = {
+        firstName: "John",
+        lastName: "Doe",
+        age: 30
+    };
+    let numbers = [1, 2, 3, 4, 5];
+
+- Cú pháp chú thích
+    // Đây là một chú thích đơn dòng
+
+    /*
+    Đây là một chú thích nhiều dòng
+    Có thể kéo dài nhiều dòng
+    */
+
+- Cú pháp khối mã
+    if (true) {
+        console.log("Đây là một khối mã.");
+    }
+
+
