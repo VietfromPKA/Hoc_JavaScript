@@ -86,4 +86,29 @@
         console.log("Đây là một khối mã.");
     }
 
+5. Biến trong JS
+- biến trong JS có thể khai báo gồm 4 cách gồm : tự động, var, let, const
+    ưu điểm:
+    let và const có phạm vi khối, không thể khai báo lại, phải khai báo trước khi sử dụng, không ràng buộc với this, không được nâng lên
+    
+    nhược điểm:
+    var  không cần phải khai báo, được nâng lên, liên kết với điều này
 
+    Luôn khai báo const khi biết chắc giá trị. Sử dụng const khi bạn khai báo:
+        Một mảng mới
+        Một đối tượng mới 
+        Một hàm mới
+        Một RegExp mới
+
+6. Toán tử JS
+    có nhiều loại toán tử khác nhau:
+    - Toán tử số học
+    - Toán tử gán
+    - Toán tử so sánh
+    - Các toán tử chuỗi
+    - Toán tử logic
+    - Toán tử Bitwise
+    - Toán tử ba ngôi
+    - Toán tử loại
+
+    

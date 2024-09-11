@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biến trong JavaScript</title>
+    <link rel="stylesheet" href="../css/style1.css">
+</head>
+
+<body>
+    <h1>Các Cách Khai Báo Biến trong JavaScript</h1>
+
+    <!-- Phần Khai báo biến -->
+    <h2>5. Biến trong JavaScript</h2>
+
+    <h3>1. Biến tự động</h3>
+    <button class="show-code-button" onclick="toggleCode('auto')">Hiển thị mã</button>
+    <div id="auto" class="code-block">
+        <pre><code>// Biến tự động
+  x = 10; // Biến không được khai báo với var, let, hoặc const
+  console.log(x); // In ra giá trị của x
+  </code></pre>
+    </div>
+
+    <h3>2. Biến với var</h3>
+    <button class="show-code-button" onclick="toggleCode('var')">Hiển thị mã</button>
+    <div id="var" class="code-block">
+        <pre><code>var y = 20; // Biến có phạm vi toàn cục hoặc phạm vi hàm
+  console.log(y); // In ra giá trị của y
+  </code></pre>
+    </div>
+
+    <h3>3. Biến với let</h3>
+    <button class="show-code-button" onclick="toggleCode('let')">Hiển thị mã</button>
+    <div id="let" class="code-block">
+        <pre><code>let z = 30; // Biến có phạm vi khối mã (block scope)
+  console.log(z); // In ra giá trị của z
+  </code></pre>
+    </div>
+
+    <h3>4. Biến với const</h3>
+    <button class="show-code-button" onclick="toggleCode('const')">Hiển thị mã</button>
+    <div id="const" class="code-block">
+        <pre><code>const a = 40; // Biến không thể thay đổi (constant) và có phạm vi khối mã
+  console.log(a); // In ra giá trị của a
+  </code></pre>
+    </div>
+
+    <h3>Ưu Điểm và Nhược Điểm</h3>
+    <button class="show-code-button" onclick="toggleCode('advantages')">Hiển thị mã</button>
+    <div id="advantages" class="code-block">
+        <pre><code>Ưu Điểm:
+  - let và const có phạm vi khối (block scope), không thể khai báo lại trong cùng phạm vi, và phải khai báo trước khi sử dụng.
+  - let và const không ràng buộc với `this` và không bị nâng lên (hoisting).
+  
+  Nhược Điểm:
+  - var không cần phải khai báo, có thể bị nâng lên (hoisting) và liên kết với `this` trong phạm vi toàn cục hoặc hàm.</code></pre>
+    </div>
+
+    <h3>Sử Dụng const</h3>
+    <button class="show-code-button" onclick="toggleCode('const-usage')">Hiển thị mã</button>
+    <div id="const-usage" class="code-block">
+        <pre><code>// Luôn khai báo const khi biết chắc giá trị
+  const numbers = [1, 2, 3]; // Một mảng mới
+  const person = { name: "John", age: 30 }; // Một đối tượng mới
+  const greet = function() { console.log("Hello!"); }; // Một hàm mới
+  const pattern = /[A-Z]/; // Một RegExp mới
+  
+  console.log(numbers);
+  console.log(person);
+  greet();
+  console.log(pattern);
+  </code></pre>
+    </div>
+
+    <script>
+        function toggleCode(id) {
+            var codeBlock = document.getElementById(id);
+            if (codeBlock.style.display === "none") {
+                codeBlock.style.display = "block";
+            } else {
+                codeBlock.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>

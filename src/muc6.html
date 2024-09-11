@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Các Toán Tử trong JavaScript</title>
+    <style>
+        body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        }
+        h1 {
+        color: #333;
+        }
+        .code-container {
+        margin-top: 10px;
+        }
+        .code-block {
+        background-color: #f4f4f4;
+        padding: 10px;
+        border: 1px solid #ddd;
+        overflow: auto;
+        display: none;
+        }
+        .show-code-button {
+        margin: 5px 0;
+        padding: 5px 10px;
+        background-color: #4CAF50; /* Màu nút */
+        color: white;
+        border: none;
+        cursor: pointer;
+        }
+        .show-code-button:hover {
+        background-color: #45a049;
+        }
+        </style>
+</head>
+
+<body>
+    <h1>Các Toán Tử trong JavaScript</h1>
+
+    <!-- Toán tử số học -->
+    <h2>1. Toán tử số học</h2>
+    <button class="show-code-button" onclick="toggleCode('arithmetic')">Hiển thị mã</button>
+    <div id="arithmetic" class="code-block">
+        <pre><code>// Toán tử số học
+let a = 10;
+let b = 5;
+console.log(a + b); // Cộng: 15
+console.log(a - b); // Trừ: 5
+console.log(a * b); // Nhân: 50
+console.log(a / b); // Chia: 2
+console.log(a % b); // Lấy phần dư: 0
+</code></pre>
+    </div>
+
+    <!-- Toán tử gán -->
+    <h2>2. Toán tử gán</h2>
+    <button class="show-code-button" onclick="toggleCode('assignment')">Hiển thị mã</button>
+    <div id="assignment" class="code-block">
+        <pre><code>// Toán tử gán
+let x = 10; // Gán giá trị 10 cho x
+x += 5; // Tương đương với x = x + 5, x bây giờ là 15
+x -= 3; // Tương đương với x = x - 3, x bây giờ là 12
+</code></pre>
+    </div>
+
+    <!-- Toán tử so sánh -->
+    <h2>3. Toán tử so sánh</h2>
+    <button class="show-code-button" onclick="toggleCode('comparison')">Hiển thị mã</button>
+    <div id="comparison" class="code-block">
+        <pre><code>// Toán tử so sánh
+console.log(10 > 5); // Lớn hơn: true
+console.log(10 < 5); // Nhỏ hơn: false
+console.log(10 === 10); // Bằng: true
+console.log(10 !== 5); // Khác: true
+</code></pre>
+    </div>
+
+    <!-- Toán tử chuỗi -->
+    <h2>4. Các toán tử chuỗi</h2>
+    <button class="show-code-button" onclick="toggleCode('string')">Hiển thị mã</button>
+    <div id="string" class="code-block">
+        <pre><code>// Toán tử chuỗi
+let firstName = "John";
+let lastName = "Doe";
+let fullName = firstName + " " + lastName; // Kết hợp chuỗi
+console.log(fullName); // In ra: John Doe
+</code></pre>
+    </div>
+
+    <!-- Toán tử logic -->
+    <h2>5. Toán tử logic</h2>
+    <button class="show-code-button" onclick="toggleCode('logical')">Hiển thị mã</button>
+    <div id="logical" class="code-block">
+        <pre><code>// Toán tử logic
+console.log(true && false); // AND: false
+console.log(true || false); // OR: true
+console.log(!true); // NOT: false
+</code></pre>
+    </div>
+
+    <!-- Toán tử Bitwise -->
+    <h2>6. Toán tử Bitwise</h2>
+    <button class="show-code-button" onclick="toggleCode('bitwise')">Hiển thị mã</button>
+    <div id="bitwise" class="code-block">
+        <pre><code>// Toán tử Bitwise
+console.log(5 & 3); // AND: 1
+console.log(5 | 3); // OR: 7
+console.log(5 ^ 3); // XOR: 6
+console.log(~5);   // NOT: -6
+console.log(5 << 1); // Left shift: 10
+console.log(5 >> 1); // Right shift: 2
+</code></pre>
+    </div>
+
+    <!-- Toán tử ba ngôi -->
+    <h2>7. Toán tử ba ngôi</h2>
+    <button class="show-code-button" onclick="toggleCode('ternary')">Hiển thị mã</button>
+    <div id="ternary" class="code-block">
+        <pre><code>// Toán tử ba ngôi
+let age = 18;
+let result = (age >= 18) ? "Người lớn" : "Trẻ em";
+console.log(result); // In ra: Người lớn
+</code></pre>
+    </div>
+
+    <!-- Toán tử loại -->
+    <h2>8. Toán tử loại</h2>
+    <button class="show-code-button" onclick="toggleCode('typeof')">Hiển thị mã</button>
+    <div id="typeof" class="code-block">
+        <pre><code>// Toán tử loại
+console.log(typeof 42); // Số: number
+console.log(typeof "Hello"); // Chuỗi: string
+console.log(typeof true); // Boolean: boolean
+console.log(typeof {}); // Đối tượng: object
+console.log(typeof []); // Mảng: object (Mảng cũng là một đối tượng trong JavaScript)
+</code></pre>
+    </div>
+
+    <script>
+        function toggleCode(id) {
+            var codeBlock = document.getElementById(id);
+            if (codeBlock.style.display === "none") {
+                codeBlock.style.display = "block";
+            } else {
+                codeBlock.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>
