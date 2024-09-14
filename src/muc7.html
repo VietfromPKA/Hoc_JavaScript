@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kiểu Dữ Liệu JavaScript với Ví Dụ</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f0f0f0;
+    }
+    h1 {
+      color: #4CAF50;
+    }
+    h2 {
+      margin-top: 20px;
+      color: #333;
+    }
+    .datatype {
+      margin-bottom: 20px;
+    }
+    .button {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .button:hover {
+      background-color: #45a049;
+    }
+    code {
+      display: block;
+      background-color: #f0f0f0;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 5px;
+    }
+    #details {
+      display: none;
+      margin-top: 20px;
+      padding: 10px;
+      background-color: white;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Các Kiểu Dữ Liệu trong JavaScript</h1>
+
+  <div class="datatype">
+    <strong>1. String</strong> - Chuỗi, dùng để lưu trữ các chuỗi ký tự.
+    <code>
+      let greeting = "Hello, World!";<br>
+      console.log(greeting); // "Hello, World!"
+    </code>
+  </div>
+
+  <div class="datatype">
+    <strong>2. Number</strong> - Số, bao gồm cả số nguyên và số thập phân.
+    <code>
+      let age = 25;<br>
+      let pi = 3.14;<br>
+      console.log(age); // 25<br>
+      console.log(pi);  // 3.14
+    </code>
+  </div>
+
+  <div class="datatype">
+    <strong>3. BigInt</strong> - Số nguyên rất lớn, dùng khi bạn cần lưu trữ số lớn hơn `Number`.
+    <code>
+      let bigNumber = 1234567890123456789012345678901234567890n;<br>
+      console.log(bigNumber); // 1234567890123456789012345678901234567890n
+    </code>
+  </div>
+
+  <div class="datatype">
+    <strong>4. Boolean</strong> - Lưu trữ giá trị `true` hoặc `false`.
+    <code>
+      let isJavaScriptFun = true;<br>
+      console.log(isJavaScriptFun); // true
+    </code>
+  </div>
+
+  <div class="datatype">
+    <strong>5. Undefined</strong> - Giá trị mặc định khi một biến chưa được gán giá trị.
+    <code>
+      let notAssigned;<br>
+      console.log(notAssigned); // undefined
+    </code>
+  </div>
+
+  <div class="datatype">
+    <strong>6. Null</strong> - Đại diện cho "không có giá trị".
+    <code>
+      let emptyValue = null;<br>
+      console.log(emptyValue); // null
+    </code>
+  </div>
+
+  <div class="datatype">
+    <strong>7. Symbol</strong> - Một giá trị duy nhất, thường được dùng cho định danh duy nhất.
+    <code>
+      let symbol1 = Symbol("id");<br>
+      let symbol2 = Symbol("id");<br>
+      console.log(symbol1 === symbol2); // false
+    </code>
+  </div>
+
+  <div class="datatype">
+    <strong>8. Object</strong> - Đối tượng, có thể chứa các giá trị phức tạp như mảng, ngày tháng, map, set, v.v.
+    <button class="button" onclick="toggleDetails()">Xem chi tiết</button>
+  </div>
+
+  <div id="details">
+    <h2>Đối tượng (Object) trong JavaScript</h2>
+    <p>Đối tượng trong JavaScript có thể chứa cả các đối tượng có sẵn và các đối tượng do người dùng tự định nghĩa.</p>
+
+    <h3>Các đối tượng có sẵn:</h3>
+    <ul>
+      <li>Objects</li>
+      <li>Arrays</li>
+      <li>Dates</li>
+      <li>Maps</li>
+      <li>Sets</li>
+      <li>IntArrays</li>
+      <li>FloatArrays</li>
+      <li>Promises</li>
+      <li>Và nhiều hơn nữa...</li>
+    </ul>
+
+    <h3>Ví dụ về đối tượng:</h3>
+    <code>
+      let person = &#123;<br>
+      &nbsp;&nbsp;firstName: "John",<br>
+      &nbsp;&nbsp;lastName: "Doe",<br>
+      &nbsp;&nbsp;age: 30<br>
+      &#125;;<br>
+      console.log(person); // { firstName: "John", lastName: "Doe", age: 30 }
+    </code>
+
+    <h3>Ví dụ về mảng:</h3>
+    <code>
+      let fruits = ["Apple", "Banana", "Mango"];<br>
+      console.log(fruits); // ["Apple", "Banana", "Mango"]
+    </code>
+
+    <h3>Ví dụ về Map:</h3>
+    <code>
+      let map = new Map();<br>
+      map.set("name", "John");<br>
+      map.set("age", 30);<br>
+      console.log(map); // Map { "name" => "John", "age" => 30 }
+    </code>
+
+    <h3>Ví dụ về Promise:</h3>
+    <code>
+      let promise = new Promise(function(resolve, reject) &#123;<br>
+      &nbsp;&nbsp;resolve("Promise thành công!");<br>
+      &#125;);<br>
+      promise.then(function(value) &#123;<br>
+      &nbsp;&nbsp;console.log(value); // "Promise thành công!"<br>
+      &#125;);
+    </code>
+  </div>
+
+  <script>
+    function toggleDetails() {
+      const details = document.getElementById('details');
+      if (details.style.display === 'none') {
+        details.style.display = 'block';
+      } else {
+        details.style.display = 'none';
+      }
+    }
+  </script>
+
+</body>
+</html>

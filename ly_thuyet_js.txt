@@ -111,4 +111,17 @@
     - Toán tử ba ngôi
     - Toán tử loại
 
-    
+7. các kiểu dữ liệu trong JS
+ - String : Chuỗi, dùng để lưu trữ các chuỗi ký tự
+ - Number : Số, bao gồm cả số nguyên và số thập phân
+ - BigInt : Số nguyên rất lớn dùng để lưu trữ các số nguyên hơn hơn Number
+ - Boolean : Lưu trữ giá trị 'true' or 'false'
+ - Undefined : Giá trị mặc định khi một biết chưa được khai báo
+ - Null : Đại diện cho không có giá trị
+ - Symbol : Một giá trị duy nhất, thường dùng cho định danh duy nhất
+ - Object : Đối tượng, có thể các giá trị phức tạp như mảng, set, map v.v (chi tiết ở mục giao diện)
+  
+8. Hàm trong JS
+ - Hàm trong JS là khối mã được thiết kế để thực hiện một tác vụ cụ thể
+ - Một hàm JS được thự thi khi được gọi nó ra
+     

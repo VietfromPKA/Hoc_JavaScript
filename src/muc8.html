@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Các Hàm trong JavaScript</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f0f0f0;
+    }
+    h1 {
+      color: #4CAF50;
+    }
+    h2 {
+      color: #333;
+    }
+    p {
+      font-size: 16px;
+      color: #333;
+    }
+    code {
+      display: block;
+      background-color: #e0e0e0;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+    }
+    .button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+    }
+    .button:hover {
+      background-color: #45a049;
+    }
+    #output {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #4CAF50;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Các Hàm trong JavaScript</h1>
+
+  <h2>Lý Thuyết</h2>
+  <p>Hàm JavaScript là một khối mã được thiết kế để thực hiện một tác vụ cụ thể. Một hàm JavaScript được thực thi khi "cái gì đó" gọi nó.</p>
+  
+  <p>Cú pháp khai báo hàm trong JavaScript:</p>
+  <code>
+    function functionName(parameters) { <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;// Khối mã được thực thi <br>
+    }
+  </code>
+
+  <p>Ví dụ một hàm tính tổng hai số:</p>
+  <code>
+    function sum(a, b) { <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;return a + b; <br>
+    } <br>
+    let result = sum(5, 10); <br>
+    console.log(result); // 15
+  </code>
+
+  <h2>Ví dụ Thực Tế</h2>
+  <p>Nhấn vào nút bên dưới để xem kết quả tính tổng của hai số 5 và 10.</p>
+
+  <button class="button" onclick="showResult()">Xem Kết Quả</button>
+
+  <div id="output"></div>
+
+  <script>
+    // Hàm tính tổng hai số
+    function sum(a, b) {
+      return a + b;
+    }
+
+    // Hàm hiển thị kết quả lên giao diện
+    function showResult() {
+      let result = sum(5, 10);
+      document.getElementById("output").innerText = "Kết quả của 5 + 10 là: " + result;
+    }
+  </script>
+
+</body>
+</html>
