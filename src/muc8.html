@@ -72,7 +72,14 @@
   </code>
 
   <h2>Ví dụ Thực Tế</h2>
-  <p>Nhấn vào nút bên dưới để xem kết quả tính tổng của hai số 5 và 10.</p>
+  <code>
+    function sum(a, b) { <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;return a + b; <br>
+    } <br>
+    let result = sum(5, 6); <br>
+    console.log(result);
+  </code>
+  <p>Nhấn vào nút bên dưới để xem kết quả tính tổng của hai số 5 và 6.</p>
 
   <button class="button" onclick="showResult()">Xem Kết Quả</button>
 
@@ -86,8 +93,8 @@
 
     // Hàm hiển thị kết quả lên giao diện
     function showResult() {
-      let result = sum(5, 10);
-      document.getElementById("output").innerText = "Kết quả của 5 + 10 là: " + result;
+      let result = sum(5, 6);
+      document.getElementById("output").innerText = "Kết quả của 5 + 6 là: " + result;
     }
   </script>
 

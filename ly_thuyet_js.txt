@@ -124,4 +124,53 @@
 8. Hàm trong JS
  - Hàm trong JS là khối mã được thiết kế để thực hiện một tác vụ cụ thể
  - Một hàm JS được thự thi khi được gọi nó ra
-     
+
+9. Đối tượng (Object) trong JS 
+ - Object là kiểu dữ liệu phức hợp cho phép bạn lưu trữ nhiều giá trị dưới dang cặp key - value
+ - Ví dụ tạo một Object :
+
+let person = {
+  name: "John",          // key là "name", value là "John"
+  age: 30,               // key là "age", value là 30
+  greet: function() {    // key là "greet", value là một hàm
+    console.log("Hello!");
+  }
+};
+
+ - ví dụ truy cập thuộc tính Object
+   - dấu chấm : dùng để truy cập thuộc tính bằng cách gọi trực tiếp từ key
+
+   console.log(person.name);  // Output: John
+
+   - dấu ngoặc vuông : dùng để truy cập thuộc tính thông qua tên key dạng chuỗi
+
+   console.log(person["age"]);  // Output: 30
+
+- Ví dụ về thêm, xóa thuộc tính
+    - thêm , cập nhật
+    person.job = "Developer";   // Thêm thuộc tính mới "job"
+    person.age = 31;            // Cập nhật giá trị "age"
+
+    - xóa
+    delete person.job;  // Xóa thuộc tính "job"
+
+- Một số tính năng quan trọng
+    - phương thức (Method) : Là các hàm được lưu trữ dưới giá trị thuộc tính
+    - Nested Object : Object có thể chứ các Object khác bên trong
+    - VD :
+        let car = {
+        brand: "Toyota",
+        model: "Camry",
+        details: {
+            year: 2022,
+            color: "red"
+        }
+    };
+    console.log(car.details.year);  // Output: 2022
+
+    => Object rất linh hoạt thường được sử dụng để tạo nhóm các dữ liệu liên quan tới nhau
+        đặc biết các ứng dụng phức tạp như web, app
+
+
+ 
+

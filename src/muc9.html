@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đối Tượng trong JavaScript</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      padding: 20px;
+    }
+    h1 {
+      color: #4CAF50;
+    }
+    h2 {
+      color: #333;
+    }
+    p, code {
+      font-size: 16px;
+      color: #333;
+    }
+    code {
+      display: block;
+      background-color: #e0e0e0;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+    }
+    .button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .button:hover {
+      background-color: #45a049;
+    }
+    #output {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #4CAF50;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Đối Tượng trong JavaScript</h1>
+
+  <h2>Lý Thuyết</h2>
+  <p>Đối tượng (Object) trong JavaScript là kiểu dữ liệu phức hợp, cho phép bạn lưu trữ nhiều giá trị dưới dạng cặp key - value.</p>
+
+  <p>Ví dụ tạo một Object:</p>
+  <code>
+    let person = { <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;name: "John",          // key là "name", value là "John" <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;age: 30,               // key là "age", value là 30 <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;greet: function() {    // key là "greet", value là một hàm <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log("Hello!"); <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;} <br>
+    };
+  </code>
+
+  <h2>Ví dụ về truy cập thuộc tính Object</h2>
+  <p>Dùng dấu chấm để truy cập thuộc tính:</p>
+  <code>console.log(person.name);  // Output: John</code>
+
+  <p>Dùng dấu ngoặc vuông để truy cập thuộc tính:</p>
+  <code>console.log(person["age"]);  // Output: 30</code>
+
+  <h2>Thêm, Cập nhật và Xóa thuộc tính</h2>
+  <p>Thêm hoặc cập nhật thuộc tính:</p>
+  <code>
+    person.job = "Developer";  // Thêm thuộc tính mới "job" <br>
+    person.age = 31;           // Cập nhật giá trị "age"
+  </code>
+
+  <p>Xóa thuộc tính:</p>
+  <code>delete person.job;  // Xóa thuộc tính "job"</code>
+
+  <h2>Object lồng nhau (Nested Object)</h2>
+  <p>Object có thể chứa các Object khác bên trong:</p>
+  <code>
+    let car = { <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;brand: "Toyota", <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;model: "Camry", <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;details: { <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;year: 2022, <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color: "red" <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;} <br>
+    }; <br>
+    console.log(car.details.year);  // Output: 2022
+  </code>
+
+  <h2>Ví dụ Thực Tế</h2>
+  <p>Nhấn vào nút bên dưới để gọi phương thức "greet" của đối tượng <code>person</code>.</p>
+
+  <button class="button" onclick="showGreeting()">Chạy Hàm greet()</button>
+
+  <div id="output"></div>
+
+  <script>
+    // Đối tượng person
+    let person = {
+      name: "John",
+      age: 30,
+      greet: function() {
+        document.getElementById("output").innerText = "Hello! Tôi là " + this.name;
+      }
+    };
+
+    // Hàm gọi phương thức greet
+    function showGreeting() {
+      person.greet();
+    }
+  </script>
+
+</body>
+</html>
