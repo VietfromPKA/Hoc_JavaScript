@@ -171,6 +171,6 @@ let person = {
     => Object rất linh hoạt thường được sử dụng để tạo nhóm các dữ liệu liên quan tới nhau
         đặc biết các ứng dụng phức tạp như web, app
 
-
+10. 
  
 
