@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thao tác với đối tượng hiển thị trong JavaScript</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      padding: 20px;
+    }
+    h1 {
+      color: #4CAF50;
+    }
+    .content {
+      font-size: 18px;
+      margin: 20px 0;
+    }
+    .highlight {
+      color: blue;
+    }
+    .button {
+      margin: 5px;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .button:hover {
+      background-color: #45a049;
+    }
+    #output {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    pre {
+      background-color: #f4f4f4;
+      padding: 15px;
+      border: 1px solid #ddd;
+      margin-top: 20px;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Ví dụ thao tác với đối tượng hiển thị trong JavaScript</h1>
+
+  <!-- Phần tử HTML -->
+  <div id="content" class="content">
+    Đây là nội dung ban đầu.
+  </div>
+
+  <!-- Các nút thao tác -->
+  <button class="button" onclick="changeContent()">Thay đổi nội dung</button>
+  <button class="button" onclick="changeStyle()">Thay đổi màu sắc</button>
+  <button class="button" onclick="addClass()">Thêm class</button>
+  <button class="button" onclick="removeElement()">Xóa phần tử</button>
+  <button class="button" onclick="resetPage()">Reset</button> <!-- Nút Reset -->
+
+  <!-- Hiển thị mã code JavaScript -->
+  <pre id="codeDisplay">/* Mã code sẽ xuất hiện ở đây */</pre>
+
+  <script>
+    // Thay đổi nội dung
+    function changeContent() {
+      let element = document.getElementById("content");
+      element.innerHTML = "Nội dung đã được thay đổi!";
+
+      // Hiển thị mã code
+      document.getElementById("codeDisplay").textContent = 
+`// Thay đổi nội dung
+let element = document.getElementById("content");
+element.innerHTML = "Nội dung đã được thay đổi!";`;
+    }
+
+    // Thay đổi kiểu dáng
+    function changeStyle() {
+      let element = document.getElementById("content");
+      element.style.color = "red";
+
+      // Hiển thị mã code
+      document.getElementById("codeDisplay").textContent = 
+`// Thay đổi kiểu dáng
+let element = document.getElementById("content");
+element.style.color = "red";`;
+    }
+
+    // Thêm class
+    function addClass() {
+      let element = document.getElementById("content");
+      element.classList.add("highlight");
+
+      // Hiển thị mã code
+      document.getElementById("codeDisplay").textContent = 
+`// Thêm class
+let element = document.getElementById("content");
+element.classList.add("highlight");`;
+    }
+
+    // Xóa phần tử
+    function removeElement() {
+      let element = document.getElementById("content");
+      element.remove();
+
+      // Hiển thị mã code
+      document.getElementById("codeDisplay").textContent = 
+`// Xóa phần tử
+let element = document.getElementById("content");
+element.remove();`;
+    }
+
+    // Tải lại trang
+    function resetPage() {
+      location.reload(); // Tải lại trang
+    }
+  </script>
+
+</body>
+</html>

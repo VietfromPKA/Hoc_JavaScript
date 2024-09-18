@@ -171,6 +171,38 @@ let person = {
     => Object rất linh hoạt thường được sử dụng để tạo nhóm các dữ liệu liên quan tới nhau
         đặc biết các ứng dụng phức tạp như web, app
 
-10. 
+10. Thuộc tính đối tượng của JS
+ - là cặp key-value (kháo và giá trị), mà một đối tưởng sở hữu. Mỗi thuộc tính có thể lữu chữ cho bất kì giá trị nào
+ - Cú pháp định nghĩa
+    let object = {
+        key1 : value1,
+        key2 : value2
+    };
+- Ví dụ đơn giản
+    let car = {
+        brand: "Toyota",
+        model: "camry",
+        year: 2022
+    };
+
+11. Đối tượng hiện thị trong JS 
+ - DOM và đối tượng hiện thị
+    DOM la một mô hình mà trình duyệt để sự dụng hiện thị html
+    Đối tượng hiện thị trong JS là các phần HTML mà bạn có thể thao tác trên web như div, p, button...
+ - Truy cập đối tượng hiện thị
+    getElementById("id") : truy cập phàn tử qua id
+    querySelector(".class") : Truy cập qua bộ chọn CSS
+ - Thao tác với đối tượng hiện thị
+    thay đổi nội dung : element.innerHTML = "Noi dung moi";
+    thay đổi kiểu dáng : element.style.color = "red";
+    thêm/ xóa class: element.classList.add("className");
+    xóa phần tử : element.remove();
+ - ví dụ
+    
+    let element = document.getElementById("className");
+    element.innerHTML = "noi dung moi";
+    element.style.color = "red";
+
+12.
  
 

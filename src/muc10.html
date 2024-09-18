@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thuộc tính Đối tượng trong JavaScript</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      padding: 20px;
+    }
+    h1 {
+      color: #4CAF50;
+    }
+    code {
+      background-color: #e0e0e0;
+      display: block;
+      padding: 10px;
+      margin: 10px 0;
+    }
+    .button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .button:hover {
+      background-color: #45a049;
+    }
+    #output {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Thuộc tính Đối tượng trong JavaScript</h1>
+  
+  <p>Đối tượng <code>car</code> được khai báo như sau:</p>
+  <code>
+    let car = {<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;brand: "Toyota",<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;model: "Camry",<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;year: 2022<br>
+    };
+  </code>
+
+  <button class="button" onclick="showCarDetails()">Hiển thị thông tin xe</button>
+  <button class="button" onclick="updateCarYear()">Cập nhật năm sản xuất</button>
+  <button class="button" onclick="deleteCarYear()">Xóa thuộc tính 'year'</button>
+
+  <div id="output"></div>
+
+  <script>
+    let car = {
+      brand: "Toyota",
+      model: "Camry",
+      year: 2022
+    };
+
+    function showCarDetails() {
+      document.getElementById("output").innerHTML = 
+        "Hãng xe: " + car.brand + "<br>" +
+        "Mẫu xe: " + car.model + "<br>" +
+        "Năm sản xuất: " + car.year;
+    }
+
+    function updateCarYear() {
+      car.year = 2023;
+      document.getElementById("output").innerHTML = 
+        "Năm sản xuất đã được cập nhật thành: " + car.year;
+    }
+
+    function deleteCarYear() {
+      delete car.year;
+      document.getElementById("output").innerHTML = 
+        "Thuộc tính 'year' đã bị xóa. Dưới đây là thông tin hiện tại của xe:<br>" +
+        "Hãng xe: " + car.brand + "<br>" +
+        "Mẫu xe: " + car.model;
+    }
+  </script>
+
+</body>
+</html>
