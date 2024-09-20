@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Các Thành Phần String trong JS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+
+        .section {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .code-container,
+        .output-container {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin-right: 10px;
+        }
+
+        .output-container {
+            background-color: #f9f9f9;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        pre {
+            white-space: pre-wrap;
+            /* Giữ định dạng cho mã */
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Các Thành Phần String trong JS</h1>
+
+    <div class="section">
+        <div class="code-container">
+            <h2>Lý Thuyết về String</h2>
+            <pre>
+- String:
+    Là một chuỗi kí tự được đặt trong dấu nháy đơn('  '), nháy kép ("  "), dấu backtick.
+    Ví dụ:
+    let str = "Phenikaa TechLearn Club";
+        </pre>
+        </div>
+        <div class="output-container">
+            <h2>Kết Quả</h2>
+            <p id="result1"></p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="code-container">
+            <h2>Phương Thức chuỗi (String Methods)</h2>
+            <pre>
+let str1 = "Hello World";
+let str2 = " Hello HaNoi ";
+console.log(str1.length); // 11
+console.log(str1.toUpperCase()); // "HELLO WORLD"
+console.log(str2.toLowerCase()); // " hello hanoi "
+console.log(str2.trim()); // "Hello HaNoi"
+console.log(str1.slice(0,5)); // "Hello"
+console.log(str1.substring(0,4)); // "Hell"
+console.log(str1.replace("World", "HaNam")); // "Hello HaNam"
+console.log(str1.concat(", ", str2)); // "Hello World, Hello HaNoi"
+        </pre>
+            <button onclick="runStringMethods()">Chạy Ví Dụ</button>
+        </div>
+        <div class="output-container">
+            <h2>Kết Quả</h2>
+            <pre id="outputMethods"></pre>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="code-container">
+            <h2>Tìm Kiếm Chuỗi (String Search)</h2>
+            <pre>
+let str = "Hello, world!";
+console.log(str.indexOf("world"));        // 7
+console.log(str.lastIndexOf("o"));        // 4
+console.log(str.includes("Hello"));       // true
+console.log(str.startsWith("Hello"));     // true
+console.log(str.endsWith("world!"));      // true
+console.log(str.search(/world/));          // 7
+        </pre>
+            <button onclick="runStringSearch()">Chạy Ví Dụ</button>
+        </div>
+        <div class="output-container">
+            <h2>Kết Quả</h2>
+            <pre id="outputSearch"></pre>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="code-container">
+            <h2>Template Strings (Chuỗi Mẫu)</h2>
+            <pre>
+let name = "John";
+let age = 30;
+let greeting = \`Hello, my name is \${name} and I am \${age} years old.\`;
+console.log(greeting); // Output: "Hello, my name is John and I am 30 years old."
+        </pre>
+            <button onclick="runTemplateString()">Chạy Ví Dụ</button>
+        </div>
+        <div class="output-container">
+            <h2>Kết Quả</h2>
+            <pre id="outputTemplate"></pre>
+        </div>
+    </div>
+
+    <script>
+        function runStringMethods() {
+            let str1 = "Hello World";
+            let str2 = " Hello HaNoi ";
+            let output = `
+    Length: ${str1.length}
+    Uppercase: ${str1.toUpperCase()}
+    Lowercase: ${str2.toLowerCase()}
+    Trimmed: ${str2.trim()}
+    Slice: ${str1.slice(0, 5)}
+    Substring: ${str1.substring(0, 4)}
+    Replace: ${str1.replace("World", "HaNam")}
+    Concat: ${str1.concat(", ", str2)}
+    `;
+            document.getElementById("outputMethods").textContent = output;
+        }
+
+        function runStringSearch() {
+            let str = "Hello, world!";
+            let output = `
+    Index of "world": ${str.indexOf("world")}
+    Last Index of "o": ${str.lastIndexOf("o")}
+    Includes "Hello": ${str.includes("Hello")}
+    Starts with "Hello": ${str.startsWith("Hello")}
+    Ends with "world!": ${str.endsWith("world!")}
+    Search "world": ${str.search(/world/)}
+    `;
+            document.getElementById("outputSearch").textContent = output;
+        }
+
+        function runTemplateString() {
+            let name = "John";
+            let age = 30;
+            let greeting = `Hello, my name is ${name} and I am ${age} years old.`;
+            document.getElementById("outputTemplate").textContent = greeting;
+        }
+    </script>
+
+</body>
+
+</html>

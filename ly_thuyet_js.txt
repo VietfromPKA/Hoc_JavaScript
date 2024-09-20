@@ -1,35 +1,35 @@
 1. cách để trèn js sự dụng thẻ <script></script> 
-- chèn nội tuyến trong thẻ <head></head> hoặc phần cuối của thẻ <body></body>
-- chèn ngoại tuyến bằng một file riêng .js và gắn liên kết ở cuối <body></body>
+ - chèn nội tuyến trong thẻ <head></head> hoặc phần cuối của thẻ <body></body>
+ - chèn ngoại tuyến bằng một file riêng .js và gắn liên kết ở cuối <body></body>
 
 2. các hình thức xuất dữ liệu của js
-- innerHTML : thay đổi một phần tự HTML - Sdung khi muốn hiện thị kết quả lên trang web
-- document.write() : ghi trực tiếp nội dung vào trang web - thường sử dụng trong quá trình tải trang
-- window.alert() : hiện thị một hộp thoại thông báo
-- window.prompt() : hiện thị hộp thoại nhập liệu, yêu cầu người dùng nhập liệu
-- console.log() : ghi thông tin vào bảng điều khiển của trình duyệt
+ - innerHTML : thay đổi một phần tự HTML  - Sdung khi muốn hiện thị kết quả lên trang web
+ - document.write() : ghi trực tiếp nội dung vào trang web  - thường sử dụng trong quá trình tải trang
+ - window.alert() : hiện thị một hộp thoại thông báo
+ - window.prompt() : hiện thị hộp thoại nhập liệu, yêu cầu người dùng nhập liệu
+ - console.log() : ghi thông tin vào bảng điều khiển của trình duyệt
 
 3. các câu lệnh phổ biến trong js
-- câu lệnh gán 
+ - câu lệnh gán 
     let x = 10;
     let y = 5;
-- câu lệnh điều kiện
+ - câu lệnh điều kiện
     if (x > y) {
         console.log("x lớn hơn y);
     }else{
         console.log("x không lớn hơn y);
     }
-- câu lệnh vòng lặp
+ - câu lệnh vòng lặp
     for(let i = 0; i < 5 ; i+=){
         console.log(i);
     }
-- câu lệnh hàm
+ - câu lệnh hàm
     function sayhello(){
         console.log("xin chao Viet Nam");
     }
 
     sayhell(); // gọi hàm
-- câu lệnh trả về
+ - câu lệnh trả về
     function sum(a, b){
         return a + b;
     }
@@ -38,10 +38,10 @@
     console.log(result);
 
 4. cú pháp trong JS
-- biến : khai báo biến dùng var, let, hoặc const
-- câu lệnh : câu lệch gán, câu lệnh điều kiện, câu lệnh vòng lặp (chi tiết xem mục 2)
-- Hàm (functions) : khai báo hàm, gọi hàm ( chi tiết xem mục 2)
-- Đối tượng, mảng :
+ - biến : khai báo biến dùng var, let, hoặc const
+ - câu lệnh : câu lệch gán, câu lệnh điều kiện, câu lệnh vòng lặp (chi tiết xem mục 2)
+ - Hàm (functions) : khai báo hàm, gọi hàm ( chi tiết xem mục 2)
+ - Đối tượng, mảng :
     Đối tượng: 
     VD : let person = {
         firstName: "John",
@@ -51,21 +51,21 @@
 
     Mảng:
     VD : let fruits = ["Fruits", "Banana"]
-- Toán tử số học
+ - Toán tử số học
     let tong = 5 + 3; //8
-    let hieu = 5 - 3; //2
+    let hieu = 5  - 3; //2
     let tich = 5 * 3; //15
     let thuong = 5 / 2; // 2.5
     let du = 5 % 3; // 2
-- Toán tử so sánh
+ - Toán tử so sánh
     so sánh bằng (5 === 5)
     so sánh khác ( 5 !== 4)
     so sanh lớn, nhỏ (5 > 4), (4 < 5)
-- Cú pháp chuỗi
+ - Cú pháp chuỗi
     let greeting = "Hello, World!";
     let multiLine = `This is a multi-line string.`;
 
-- Cú pháp dấu phẩy
+ - Cú pháp dấu phẩy
     let person = {
         firstName: "John",
         lastName: "Doe",
@@ -73,7 +73,7 @@
     };
     let numbers = [1, 2, 3, 4, 5];
 
-- Cú pháp chú thích
+ - Cú pháp chú thích
     // Đây là một chú thích đơn dòng
 
     /*
@@ -81,13 +81,13 @@
     Có thể kéo dài nhiều dòng
     */
 
-- Cú pháp khối mã
+ - Cú pháp khối mã
     if (true) {
         console.log("Đây là một khối mã.");
     }
 
 5. Biến trong JS
-- biến trong JS có thể khai báo gồm 4 cách gồm : tự động, var, let, const
+ - biến trong JS có thể khai báo gồm 4 cách gồm : tự động, var, let, const
     ưu điểm:
     let và const có phạm vi khối, không thể khai báo lại, phải khai báo trước khi sử dụng, không ràng buộc với this, không được nâng lên
     
@@ -129,13 +129,13 @@
  - Object là kiểu dữ liệu phức hợp cho phép bạn lưu trữ nhiều giá trị dưới dang cặp key - value
  - Ví dụ tạo một Object :
 
-let person = {
-  name: "John",          // key là "name", value là "John"
-  age: 30,               // key là "age", value là 30
-  greet: function() {    // key là "greet", value là một hàm
-    console.log("Hello!");
-  }
-};
+    let person = {
+    name: "John",          // key là "name", value là "John"
+    age: 30,               // key là "age", value là 30
+    greet: function() {    // key là "greet", value là một hàm
+        console.log("Hello!");
+        }
+    };
 
  - ví dụ truy cập thuộc tính Object
    - dấu chấm : dùng để truy cập thuộc tính bằng cách gọi trực tiếp từ key
@@ -146,7 +146,7 @@ let person = {
 
    console.log(person["age"]);  // Output: 30
 
-- Ví dụ về thêm, xóa thuộc tính
+ - Ví dụ về thêm, xóa thuộc tính
     - thêm , cập nhật
     person.job = "Developer";   // Thêm thuộc tính mới "job"
     person.age = 31;            // Cập nhật giá trị "age"
@@ -154,7 +154,7 @@ let person = {
     - xóa
     delete person.job;  // Xóa thuộc tính "job"
 
-- Một số tính năng quan trọng
+ - Một số tính năng quan trọng
     - phương thức (Method) : Là các hàm được lưu trữ dưới giá trị thuộc tính
     - Nested Object : Object có thể chứ các Object khác bên trong
     - VD :
@@ -178,7 +178,7 @@ let person = {
         key1 : value1,
         key2 : value2
     };
-- Ví dụ đơn giản
+ - Ví dụ đơn giản
     let car = {
         brand: "Toyota",
         model: "camry",
@@ -244,7 +244,61 @@ let person = {
     Sự kiện là các tương tác ở trang web
     Dùng addEventListener() để xử lý sự kiện
     Các sự kiện phổ biến như click, load, submit ...
+
+13. các thành phần String trong JS
+ - String:
+    là một chuỗi kí tự được đặt trong dấu nháy đơn('  '), nháy kép ("  "), dấu backtick
+    ví dụ :
+    let str = "Phenikaa TechLearn Club";
+
+ - Phương Thức chuỗi ( String Mathods)
+    length : trả về độ dài
+    toUpperCase() : chuyển chuỗi thành viết hoa
+    toLowerCase() : chuyển chuỗi thành viết thường
+    trim() : loại bỏ khoảng trắng ở đầu và cuối chuỗi
+    slice(start, end): trích xuất chuỗi ở khoảng từ start đến end không bao gồm end
+    substring(start, end): tương tự như slice(), nhưng không chấp nhận chỉ số âm
+    replace(searchValue, newValue): thay thế chuỗi con seachValue bằng chuỗi newValue
+    concat() : nối các chuỗi với nhau
+
+    VD: 
+    let str1 = "Hello World";
+    let str2 = " Hello HaNoi ";
+    console.log(str1.length); // 11
+    console.log(str1.toUpperCase()); // "HELLO WORLD"
+    console.log(str2.toLowerCase()); // " hello hanoi "
+    console.log(str2.trim()); // "Hello HaNoi"
+    console.log(str1.slice(0,5)); // "Hello"
+    console.log(str1.substring(0,4)); // "Hello"
+    console.log(str1.replace("World", "HaNam")); // "Hello HaNam"
+    console.log(str1.concat(", ", str2)); // "Hello World, Hello HaNoi"
+
+ - Tìm kiếm chuỗi (String Search)
+    indexOf(substring): Trả về vị trí đầu tiên của substring trong chuỗi; nếu không tìm thấy, trả về -1.
+    lastIndexOf(substring): Tương tự indexOf(), nhưng tìm từ cuối chuỗi.
+    includes(substring): Kiểm tra chuỗi có chứa substring không; trả về true hoặc false.
+    startsWith(substring): Kiểm tra chuỗi có bắt đầu bằng substring không.
+    endsWith(substring): Kiểm tra chuỗi có kết thúc bằng substring không.
+    search(regex): Tìm kiếm substring theo biểu thức chính quy; trả về vị trí đầu tiên hoặc -1 nếu không tìm thấy.
     
+    VD:
+    let str = "Hello, world!";
+    console.log(str.indexOf("world"));        // 7
+    console.log(str.lastIndexOf("o"));        // 4
+    console.log(str.includes("Hello"));       // true
+    console.log(str.startsWith("Hello"));     // true
+    console.log(str.endsWith("world!"));      // true
+    console.log(str.search(/world/));          // 7
+ - Template Strings (Chuỗi mẫu)
+    Template strings (hoặc template literals) là một tính năng trong ES6 cho phép bạn sử dụng cú pháp dễ đọc hơn để nhúng biến và biểu thức vào chuỗi. Chuỗi mẫu sử dụng dấu backtick (`) thay vì dấu nháy đơn hoặc kép, và bạn có thể chèn biến hoặc biểu thức bằng cách sử dụng ${}.
+
+    VD: 
+    let name = "John";
+    let age = 30;
+
+    let greeting = `Hello, my name is ${name} and I am ${age} years old.`;
+    console.log(greeting); // Output: "Hello, my name is John and I am 30 years old."
+
 
 
  
