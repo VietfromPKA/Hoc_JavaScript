@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Số trong JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+
+        .section {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .code-container,
+        .output-container {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin-right: 10px;
+        }
+
+        .output-container {
+            background-color: #f9f9f9;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        pre {
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Số trong JavaScript</h1>
+
+    <div class="section">
+        <div class="code-container">
+            <h2>1. Kiểu Dữ Liệu Number</h2>
+            <pre>
+- Trong JS hỗ trợ kiểu dữ liệu number để đại diện cho số, bao gồm cả số thực và số nguyên.
+            </pre>
+        </div>
+        <div class="output-container">
+            <h2>Kết Quả</h2>
+            <p>Khả năng biểu diễn các số trong JavaScript.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="code-container">
+            <h2>2. JS BigInt</h2>
+            <pre>
+let bigInt1 = 123456789012345678901234567890n; // BigInt
+let bigInt2 = BigInt("123456789012345678901234567890"); // BigInt từ chuỗi
+            </pre>
+            <button onclick="runBigInt()">Chạy Ví Dụ</button>
+        </div>
+        <div class="output-container">
+            <h2>Kết Quả</h2>
+            <pre id="outputBigInt"></pre>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="code-container">
+            <h2>3. Phương Thức Số trong JS</h2>
+            <pre>
+console.log(Number.isNaN(NaN)); // true
+console.log(Number.isInteger(5)); // true
+console.log(Number.parseFloat("3.14")); // 3.14
+console.log(Number.parseInt("123px")); // 123
+let num = 2.34567;
+console.log(num.toFixed(2)); // "2.35"
+            </pre>
+            <button onclick="runNumberMethods()">Chạy Ví Dụ</button>
+        </div>
+        <div class="output-container">
+            <h2>Kết Quả</h2>
+            <pre id="outputMethods"></pre>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="code-container">
+            <h2>4. Thuộc Tính Số Liên Quan trong JS</h2>
+            <pre>
+console.log(Number.MAX_VALUE); // 1.7976931348623157e+308
+console.log(Number.MIN_VALUE); // 5e-324
+console.log(Number.MAX_SAFE_INTEGER); // 9007199254740991
+console.log(Number.MIN_SAFE_INTEGER); // -9007199254740991
+            </pre>
+            <button onclick="runNumberProperties()">Chạy Ví Dụ</button>
+        </div>
+        <div class="output-container">
+            <h2>Kết Quả</h2>
+            <pre id="outputProperties"></pre>
+        </div>
+    </div>
+
+    <script>
+        function runBigInt() {
+            let bigInt1 = 123456789012345678901234567890n;
+            let bigInt2 = BigInt("123456789012345678901234567890");
+            let output = `
+BigInt 1: ${bigInt1}
+BigInt 2: ${bigInt2}
+            `;
+            document.getElementById("outputBigInt").textContent = output;
+        }
+
+        function runNumberMethods() {
+            let output = `
+Is NaN: ${Number.isNaN(NaN)}
+Is Integer (5): ${Number.isInteger(5)}
+Parsed Float: ${Number.parseFloat("3.14")}
+Parsed Int: ${Number.parseInt("123px")}
+Fixed to 2: ${(2.34567).toFixed(2)}
+            `;
+            document.getElementById("outputMethods").textContent = output;
+        }
+
+        function runNumberProperties() {
+            let output = `
+Max Value: ${Number.MAX_VALUE}
+Min Value: ${Number.MIN_VALUE}
+Max Safe Integer: ${Number.MAX_SAFE_INTEGER}
+Min Safe Integer: ${Number.MIN_SAFE_INTEGER}
+            `;
+            document.getElementById("outputProperties").textContent = output;
+        }
+    </script>
+
+</body>
+
+</html>

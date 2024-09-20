@@ -299,7 +299,53 @@
     let greeting = `Hello, my name is ${name} and I am ${age} years old.`;
     console.log(greeting); // Output: "Hello, my name is John and I am 30 years old."
 
+14. Số trong Js( JS Number)
 
+ - Trong JS hỗ trợ kiểu dữ liệu number để đại diện cho số, trong đó có cả số thực và số nguyên..
 
- 
+ - JS BigInt
+   BigInt là kiểu dữ liệu số nguyên được giới thiệu trong ES2020, dùng để lưu trữ các số nguyên lớn hơn 2^53 - 1
+   Để tạo một BigInt thì chúng ta thêm chữ n vào cuối or cho chuỗi số vào BigInt()
+
+   VD:
+      let bigInt1 = 123456789012345678901234567890n; // BigInt
+      let bigInt2 = BigInt("123456789012345678901234567890"); // BigInt từ chuỗi
+
+ - Phương thức số trong JS
+      Number.isNaN(value): Kiểm tra xem giá trị có phải là NaN (Not-a-Number) không.
+      console.log(Number.isNaN(NaN)); // true
+
+      Number.isInteger(value): Kiểm tra xem giá trị có phải là số nguyên không.
+      console.log(Number.isInteger(5)); // true
+      console.log(Number.isInteger(5.5)); // false      
+
+      Number.parseFloat(string): Chuyển đổi chuỗi thành số thực.
+      console.log(Number.parseFloat("3.14")); // 3.14
+
+      Number.parseInt(string): Chuyển đổi chuỗi thành số nguyên.
+      console.log(Number.parseInt("123px")); // 123
+
+      Number.toFixed(digits): Làm tròn số đến số chữ số thập phân đã chỉ định.
+      let num = 2.34567;
+      console.log(num.toFixed(2)); // "2.35"
+
+ - Thuộc tính số liên quan trong JS
+      Number.MAX_VALUE: Giá trị lớn nhất có thể biểu diễn bằng Number.
+      console.log(Number.MAX_VALUE); // 1.7976931348623157e+308
+
+      Number.MIN_VALUE: Giá trị nhỏ nhất khác 0 có thể biểu diễn bằng Number.
+      console.log(Number.MIN_VALUE); // 5e-324
+
+      Number.MAX_SAFE_INTEGER: Giá trị nguyên lớn nhất mà JavaScript có thể chính xác (2^53 - 1).
+      console.log(Number.MAX_SAFE_INTEGER); // 9007199254740991
+
+      Number.MIN_SAFE_INTEGER: Giá trị nguyên nhỏ nhất mà JavaScript có thể chính xác (-2^53 + 1)
+      console.log(Number.MIN_SAFE_INTEGER); // -9007199254740991
+
+ - tóm tắt
+      Number: Kiểu dữ liệu cơ bản cho số trong JavaScript.
+      BigInt: Kiểu dữ liệu cho số nguyên lớn.
+      Number Methods: Các phương thức như isNaN(), isInteger(), parseFloat(), và toFixed().
+      Number Properties: Các thuộc tính như MAX_VALUE, MIN_VALUE, MAX_SAFE_INTEGER, và MIN_SAFE_INTEGER.
+
 

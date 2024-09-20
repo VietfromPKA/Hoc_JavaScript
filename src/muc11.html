@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,16 +11,20 @@
       background-color: #f9f9f9;
       padding: 20px;
     }
+
     h1 {
       color: #4CAF50;
     }
+
     .content {
       font-size: 18px;
       margin: 20px 0;
     }
+
     .highlight {
       color: blue;
     }
+
     .button {
       margin: 5px;
       padding: 10px 20px;
@@ -29,14 +34,17 @@
       border-radius: 5px;
       cursor: pointer;
     }
+
     .button:hover {
       background-color: #45a049;
     }
+
     #output {
       margin-top: 20px;
       font-size: 18px;
       font-weight: bold;
     }
+
     pre {
       background-color: #f4f4f4;
       padding: 15px;
@@ -46,6 +54,7 @@
     }
   </style>
 </head>
+
 <body>
 
   <h1>Ví dụ thao tác với đối tượng hiển thị trong JavaScript</h1>
@@ -72,8 +81,8 @@
       element.innerHTML = "Nội dung đã được thay đổi!";
 
       // Hiển thị mã code
-      document.getElementById("codeDisplay").textContent = 
-`// Thay đổi nội dung
+      document.getElementById("codeDisplay").textContent =
+        `// Thay đổi nội dung
 let element = document.getElementById("content");
 element.innerHTML = "Nội dung đã được thay đổi!";`;
     }
@@ -84,8 +93,8 @@ element.innerHTML = "Nội dung đã được thay đổi!";`;
       element.style.color = "red";
 
       // Hiển thị mã code
-      document.getElementById("codeDisplay").textContent = 
-`// Thay đổi kiểu dáng
+      document.getElementById("codeDisplay").textContent =
+        `// Thay đổi kiểu dáng
 let element = document.getElementById("content");
 element.style.color = "red";`;
     }
@@ -96,8 +105,8 @@ element.style.color = "red";`;
       element.classList.add("highlight");
 
       // Hiển thị mã code
-      document.getElementById("codeDisplay").textContent = 
-`// Thêm class
+      document.getElementById("codeDisplay").textContent =
+        `// Thêm class
 let element = document.getElementById("content");
 element.classList.add("highlight");`;
     }
@@ -108,8 +117,8 @@ element.classList.add("highlight");`;
       element.remove();
 
       // Hiển thị mã code
-      document.getElementById("codeDisplay").textContent = 
-`// Xóa phần tử
+      document.getElementById("codeDisplay").textContent =
+        `// Xóa phần tử
 let element = document.getElementById("content");
 element.remove();`;
     }
@@ -121,4 +130,5 @@ element.remove();`;
   </script>
 
 </body>
+
 </html>
