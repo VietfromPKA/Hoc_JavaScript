@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lý thuyết và Ví dụ Sự kiện JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #4CAF50;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .box {
+            margin: 20px 0;
+            padding: 20px;
+            border: 2px solid #ddd;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .left-column,
+        .right-column {
+            width: 48%;
+        }
+
+        .button {
+            margin: 5px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+
+        textarea {
+            width: 100%;
+            height: 150px;
+            padding: 10px;
+            margin-top: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: monospace;
+            white-space: pre-wrap;
+            overflow: auto;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .event-description {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Lý thuyết và Ví dụ Sự kiện JavaScript</h1>
+    <div class="container">
+        <!-- Cột bên trái: Các phần tử HTML tương tác -->
+        <div class="left-column">
+            <!-- Sự kiện chuột -->
+            <div class="box">
+                <h3>Sự kiện chuột</h3>
+                <button id="clickButton" class="button">Nhấn chuột (Click)</button>
+                <button id="dblClickButton" class="button">Nhấn đúp chuột (DblClick)</button>
+                <button id="hoverButton" class="button">Di chuột qua (Mouseover)</button>
+            </div>
+
+            <!-- Sự kiện bàn phím -->
+            <div class="box">
+                <h3>Sự kiện bàn phím</h3>
+                <input type="text" id="inputField" placeholder="Nhập gì đó..." class="button" />
+            </div>
+
+            <!-- Sự kiện form -->
+            <div class="box">
+                <h3>Sự kiện form</h3>
+                <form id="myForm">
+                    <input type="text" id="name" placeholder="Nhập tên..." class="button" required />
+                    <input type="submit" value="Gửi form" class="button">
+                </form>
+            </div>
+
+            <!-- Sự kiện trang web -->
+            <div class="box">
+                <h3>Sự kiện trang web</h3>
+                <button id="resizeButton" class="button">Thay đổi kích thước trang</button>
+                <button id="scrollButton" class="button">Cuộn trang</button>
+            </div>
+        </div>
+
+        <!-- Cột bên phải: Mã code sự kiện -->
+        <div class="right-column">
+            <h2>Mã Sự kiện:</h2>
+            <textarea id="codeOutput" readonly></textarea>
+            <!-- Hiển thị kết quả -->
+            <div id="result"></div>
+            <div>
+                <img src="../img/logo_PTC.png" alt="" style="width: 100%; height: auto;">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Sự kiện Click
+        let clickButton = document.getElementById("clickButton");
+        clickButton.addEventListener("click", function () {
+            document.getElementById("result").innerHTML = "Bạn đã nhấn chuột!";
+            document.getElementById("codeOutput").value = `
+        // Sự kiện Click
+        let clickButton = document.getElementById("clickButton");
+        clickButton.addEventListener("click", function() {
+          document.getElementById("result").innerHTML = "Bạn đã nhấn chuột!";
+        });
+      `;
+        });
+
+        // Sự kiện Double Click
+        let dblClickButton = document.getElementById("dblClickButton");
+        dblClickButton.addEventListener("dblclick", function () {
+            document.getElementById("result").innerHTML = "Bạn đã nhấn đúp chuột!";
+            document.getElementById("codeOutput").value = `
+        // Sự kiện Double Click
+        let dblClickButton = document.getElementById("dblClickButton");
+        dblClickButton.addEventListener("dblclick", function() {
+          document.getElementById("result").innerHTML = "Bạn đã nhấn đúp chuột!";
+        });
+      `;
+        });
+
+        // Sự kiện Mouseover
+        let hoverButton = document.getElementById("hoverButton");
+        hoverButton.addEventListener("mouseover", function () {
+            document.getElementById("result").innerHTML = "Bạn đã di chuột qua nút!";
+            document.getElementById("codeOutput").value = `
+        // Sự kiện Mouseover
+        let hoverButton = document.getElementById("hoverButton");
+        hoverButton.addEventListener("mouseover", function() {
+          document.getElementById("result").innerHTML = "Bạn đã di chuột qua nút!";
+        });
+      `;
+        });
+
+        // Sự kiện Keydown
+        let inputField = document.getElementById("inputField");
+        inputField.addEventListener("keydown", function (event) {
+            document.getElementById("result").innerHTML = "Bạn đã nhấn phím: " + event.key;
+            document.getElementById("codeOutput").value = `
+        // Sự kiện Keydown
+        let inputField = document.getElementById("inputField");
+        inputField.addEventListener("keydown", function(event) {
+          document.getElementById("result").innerHTML = "Bạn đã nhấn phím: " + event.key;
+        });
+      `;
+        });
+
+        // Sự kiện Submit Form
+        let form = document.getElementById("myForm");
+        form.addEventListener("submit", function (event) {
+            event.preventDefault(); // Ngăn form tự động gửi đi
+            document.getElementById("result").innerHTML = "Form đã được gửi!";
+            document.getElementById("codeOutput").value = `
+        // Sự kiện Submit Form
+        let form = document.getElementById("myForm");
+        form.addEventListener("submit", function(event) {
+          event.preventDefault();
+          document.getElementById("result").innerHTML = "Form đã được gửi!";
+        });
+      `;
+        });
+
+        // Sự kiện Resize (Thay đổi kích thước trang)
+        window.addEventListener("resize", function () {
+            document.getElementById("result").innerHTML = "Kích thước trang đã thay đổi!";
+            document.getElementById("codeOutput").value = `
+        // Sự kiện Resize
+        window.addEventListener("resize", function() {
+          document.getElementById("result").innerHTML = "Kích thước trang đã thay đổi!";
+        });
+      `;
+        });
+
+        // Sự kiện Scroll (Cuộn trang)
+        window.addEventListener("scroll", function () {
+            document.getElementById("result").innerHTML = "Bạn đã cuộn trang!";
+            document.getElementById("codeOutput").value = `
+        // Sự kiện Scroll
+        window.addEventListener("scroll", function() {
+          document.getElementById("result").innerHTML = "Bạn đã cuộn trang!";
+        });
+      `;
+        });
+    </script>
+
+</body>
+
+</html>

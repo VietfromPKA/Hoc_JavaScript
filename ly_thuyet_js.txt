@@ -203,6 +203,49 @@ let person = {
     element.innerHTML = "noi dung moi";
     element.style.color = "red";
 
-12.
+12. Sự kiện trong JS (event JS)
+ - Một số sự kiện đặc biệt
+    Sự kiện chuột
+    - click : Xẩy ra khi người dùng nhập chuột vào một phần tử
+    - dblclick : Xảy ra khi người dùng nhấp đúp chuột
+    - mouseover : Xảy ra khi người dùng di qua một phần tử
+    - mouseout : Xảy ra khi người dùng dời ra khỏi một phần tử
+    
+    Sự kiện bàn phím
+    - keydown : Xảy ra khi người dùng nhấn phím
+    - keyup : Xảy ra khi người dùng nhả phím
+
+    Sự kiện form
+    - submit : Xảy ra khi người dùng gửi form
+    - change : Xảy ra khi giá trị của một trường nhập liệu thay đổi
+    - focus : Xảy ra khi một phần tử được chọn
+    - blur : Xảy ra khi một phần tử mất tiêu điểm
+
+    Sự kiện trang web
+    - load : xảy ra khi trang or hình ảnh tải xong
+    - resize : xảy ra khi các kích thước của trang web thay đổi
+    - scroll : xảy ra khi người dùng cuộn trang
+
+ - Ví dụ:
+    <button id="myButton">Nhấn tôi!</button>
+
+    <script>
+    // Truy cập phần tử nút
+        let button = document.getElementById("myButton");
+
+        // Lắng nghe sự kiện click và thực thi hàm
+        button.addEventListener("click", function() {
+            alert("Bạn đã nhấn nút!");
+         });
+    </script>
+
+ - Tóm tắt
+
+    Sự kiện là các tương tác ở trang web
+    Dùng addEventListener() để xử lý sự kiện
+    Các sự kiện phổ biến như click, load, submit ...
+    
+
+
  
 
